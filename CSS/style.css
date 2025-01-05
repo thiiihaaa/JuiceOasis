@@ -37,12 +37,25 @@ p{
     box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.432);
 }
 
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+
 #logo{
     overflow: hidden;
     margin-left: 30px;
     border-radius: 200px 200px 200px 200px;
--webkit-border-radius: 200px 200px 200px 200px;
--moz-border-radius: 200px 200px 200px 200px;
 }
 #nav{
     margin-right: 20px;
@@ -1479,7 +1492,7 @@ textarea{
         display: grid;
         grid-template-columns: repeat(3,1fr);
         gap: 20px ;
-        width: 60%;
+        width: 65%;
         margin: 50px auto 50px auto;
     }
     
@@ -1592,24 +1605,28 @@ footer h1{
     box-shadow: 0px -4px 5px 0px rgba(0, 0, 0, 0.402);
 }
 
-.footer #connect{
-    width: 70px;
-}
 
 .footer h3{
-    font-size: 15px;
+    font-size: 16px;
     font-weight: bold;
     color: #fff;
     margin: 20px 0;
 }
 .footer p{
     color: #fff;
-    line-height: 20px;
+    line-height: 15px;
     letter-spacing: 0.5px;
-    font-size: 10px;
+    font-size: 13px;
+}
+#connect{
+    margin: 0 0 0 70px;
+}
+#support{
+    margin: 0 70px 0 0;
 }
 .copyright{
-    margin-top: 100px;
+    margin-top: 120px;
+    margin-left: 15px;
 }
  /*Home Page End(responsive)*/
 
@@ -1784,8 +1801,431 @@ font-size: 14px;
 #form-container{
     width: 40%;
 }
+}
+
+
+
+@media(max-width:768px){
+
+    body{
+        margin: 0;
+        padding: 0;
+    }
+
+#nav .nav-list{
+    display: none;
+}
+.menu-toggle {
+    display: block;
+}
+
+
+@keyframes Anime1 {
+    0% {
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateX(-200px);
+    }   
+}
+
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(30, 30, 30); /* Semi-transparent black */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1000; /* Ensure it covers everything */
+    animation: Anime1 .5s ease-in-out forwards ;
+    visibility: hidden;
+     /* Hide the overlay initially */
+}
+@keyframes Anime1 {
+    0% {
+        transform: translateX(500px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+.hambuger-menu li{
+    margin: 70px auto;
+}
+.hambuger-menu li a{
+    color: #fff;
+    font-size: 20px;
+}
+
+.top-bar{
+    height: 20px;
+}
+.top-bar p{
+    font-size: 10px;
+}
+.logo-nav{
+    height: 50px;
+}
+#logo{
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+}
+
+/*Home page Start(responsive phone)*/
+.top-img{
+    background-position: center center;
+    width: 100%;
+    height: 150px;
+    margin-top: 20px;
+    padding-top: 200px;
+    margin-left: 0;
+    margin-right: 0;
+}
+.top-img p{
+    font-size: 13px;
+}
+.top-img h1{
+    font-size: 35px;
+}
+
+#container{
+    padding-top: 0px;
+    margin-bottom: 20px;
+    
+}
+.button #button1{
+    width: 60px;
+    height: 30px;
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+section p{
+    font-size:12px;
+}
+section h1{
+    font-size: 25px;
+}
+
+.main{
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+}
+
+#recommendation{
+    width: 350px;
+    height: 450px;
+    margin: 30px auto 50px auto;
+}
+#recommendation  p{
+    margin-top: 10px;
+}
+#recommendation img{
+    height: 85%;
+}
+
+
+#seasonal-special, #refreshing-juice{
+    height:250px;
+    width: 350px;
+    margin: 35px auto;
+}
+
+.main h2{
+    font-size: 16px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+
+.container1{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px ;
+    width: 80%;
+    margin: 100px auto 50px auto;
+}
+
+#box{
+    margin-bottom: 20px;
+}
+
+.item{
+    font-size: 13px;
+}
+.price{
+    font-size: 13px;
+}
+
+.container2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 20px auto;
+    box-shadow: 0px 6px 7px 0px rgba(0,0,0,0.6);
+}
+
+#box1{
+ width: 50%;
+ height: 200px;
+}
+
+#box1 p{
+    text-align: center;
+    margin-top: 13px;
+    font-size: 12px;
+    line-height: 20px;
+}
+#box1 .review .star{
+    font-size: 15px;
+}
+#box1 .review{
+    margin: auto 0;
+}
+#box1 p img{
+    width:30px;
+    height: 30px;
+}
+
+footer h1{
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin: 80px 0;
+}
+
+.container3{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 80%;
+    margin: 0 auto;
+}
+#box2 h3{
+    font-size: 15px;
+}
+#box2 p{
+    font-size: 13px;
+    color: #333;
+    margin-top: 30px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+}
+
+.foot-pic{
+    width: 80%;
+    height: 200px;
+}
+
+.footer{
+    width: 100%;
+    height: 200px;
+    background-color: #4a7110;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px -4px 5px 0px rgba(0, 0, 0, 0.402);
+}
+#connect{
+    margin: 0 0 0 30px;
+}
+#support{
+    margin: 0 30px 0 0;
+}
+.footer h3{
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+    margin: 20px 0;
+}
+.footer p{
+    font-size: 13px;
+    color: #fff;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+}
+.copyright{
+    margin-top: 65px;
+    margin-left: 15px;
+}
+/*Home page End(responsive phone)*/
+
+/*product page Start(responsive phone)*/
+.product-page h1{
+    margin-top: 110px;
+    font-size: 20px;
+}
+.product-page .container1{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px ;
+    width: 70%;
+    margin: 100px auto 50px auto;
+}
+
+.product-page .item{
+font-size: 13px;
+}
+.product-page .price{
+    font-size: 13px;
+}
+
+.product-review, .review2{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+.review2 img{
+    height: 100%;
+    width: 100%;
+}
+.review-item{
+    position: absolute;
+    top: unset;
+    bottom: 25px;
+    opacity: 1;
+}
+.review-item p {
+    text-align: center; 
+    margin: 10px 0;
+    font-size: 13px;
+    color: #333;
+}
+ /*Product page End(responsive Phone)*/
+
+/*About page start(responsive Phone)*/
+
+section .about-container1{
+    margin: 150px auto 150px auto;
+    width: 80%;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: center;
+    position: relative;
+}
+
+.about-container1 #store{
+    width: 50%;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 35px;
+}
+
+#store #img-text{
+    position: absolute;
+    width: 30%;
+    height: 70px;
+    bottom: 15%;
+    left: 50%;
+}
+#img-text p{
+    font-size: 10px;
+}
+
+#contents p{
+    line-height: 16px;
+    letter-spacing: 0.3px;
+    font-size: 12px;
+}
+#contents h1{
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.7px;
+}
+#contents button{
+    margin-top: 20px;
+    border-radius: 25px;
+    width: 80px;
+    height: 30px;
+    color: #F44336;
+    border-style: none;
+    font-size: 12px;
+}
+
+.title p{
+    margin: 20px auto;
+    letter-spacing: 0.3px;
+    font-size: 13px;
+}
+.title h1{
+    font-size: 20px;
+}
+
+.about-container2{
+    display: block;
+    width: 80%;
+    margin: 30px auto;
+}
+.about-container2 #img1{
+    width: 80%;
+    height: 300px;
+    margin: 20px auto;
+}
+.about-container2 #img2{
+    width: 80%;
+    height: 300px;
+    margin: 20px auto;
+}
+.container2-contents{
+    display: block;
+    width: 80%;
+    margin: 10px auto ;
+}
+
+.container2-contents h3{
+    font-size: 16px;
+  margin: 15px 0;
+  text-align: center;
+}
+.container2-contents p{
+    color: #333;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    margin: 10px 0;
+    margin-left: 10px;
+}
+.container2-contents #button button{
+    margin: 20px 0  20px 150px;
+    width: 80px;
+    height: 30px;
+    font-size: 12px;
+}
+/*About page End(responsive Phone)*/
+
+/*Contact page Start(responsive Phone)*/
+.contact-bg{
+    width: 100%;
+}
+
+.contact-bg h1{
+    padding-top: 100px;
+    margin-bottom: 20px;
+}
+
+#form-container{
+    width: 70%;
+}
+
+
+/*Contact page End(responsive Phone)*/
 
 }
+
 
 
 

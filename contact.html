@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="CSS/reset.css">
 </head>
 <body>
+    <div id="overlay">
+        <ul class="hambuger-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Product</a></li>
+            <li><a href="aboutt.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
     <header>
         <div class="fixed">
             <div class="top-bar">
@@ -15,11 +23,16 @@
             </div>
               <div class="logo-nav">
                 <div id="logo">
-                    <img src="images/logo.jpg" width="45" height="45" alt="logo">
+                    <a href="index.html"><img src="images/logo.jpg" width="45" height="45" alt="logo"></a>
                 </div>
                 <div id="nav">
                     <nav>
-                        <ul>
+                        <div class="menu-toggle" id="menu-toggle">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                        <ul class="nav-list">
                             <li><a href="index.html">Home</a></li>
                             <li><a href="products.html">Product</a></li>
                             <li><a href="aboutt.html">About</a></li>
@@ -76,10 +89,6 @@
             </div>
         </div>
     </footer>
-
-
-
-
-
+<script src="script.js"></script>
 </body>
 </html>
